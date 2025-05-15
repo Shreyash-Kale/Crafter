@@ -39,6 +39,7 @@ This repo includes three main modules:
 - **DreamerV2 agent** (`dreamer/`)
 - **PPO agent** (`ppo/`)
 
+
 ---
 
 ## 🚀 Quick Start
@@ -50,6 +51,45 @@ This repo includes three main modules:
 | Dreamer Evaluation      | `dreamer/environment.py`   | `python dreamer/environment.py`     |
 | PPO Training            | `ppo/train_ppo_crafter.py` | `python ppo/train_ppo_crafter.py`   |
 | PPO Evaluation          | `ppo/eval_ppo_crafter.py`  | `python ppo/eval_ppo_crafter.py`    |
+
+---
+
+# 📂 Running the Visualization Module with Sample Data
+
+To run the visualization module:
+
+1. Execute the visualization script:
+   ```bash
+   python viz/VisMain.py
+   ```
+
+2. Ensure that both the CSV log files and the corresponding MP4 video files are present in their respective folders. These are required for the UI to display synchronized agent behavior and reward signal visualizations.
+
+3. Sample log and video files are provided in the repository for both Dreamer and PPO agents:
+
+   - **DreamerV2:**
+     - Log file: `Plots_Dreamer/ckpt270000_episode300.csv`
+     - Video file: `Plots_Dreamer/ckpt270000_episode300.mp4`
+   
+   - **PPO:**
+     - Log file: `Plots_PPO/episode_295.csv`
+     - Video file: `Plots_PPO/episode_295.mp4`
+
+These files are pre-integrated to allow immediate testing of the visualization module.
+
+> If you wish to generate your own evaluation logs and gameplay videos:
+
+- For **DreamerV2**, run:
+  ```bash
+  python dreamer/environment.py
+  ```
+
+- For **PPO**, run:
+  ```bash
+  python ppo/eval_ppo_crafter.py
+  ```
+
+Generated outputs can be saved and reused with the visualization UI by placing them in the correct folders or updating the script paths as needed.
 
 ---
 
